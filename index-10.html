@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>石丸伸二まとめ</title>
+<meta name="description" content="石丸伸二氏の公式チャンネル・SNSと関連番組をひとまとめにした非公式リンク集">
+<meta name="theme-color" content="#D9C9F0">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sky-top:#D6C6F2;
+    --sky-mid:#E9DEF6;
+    --sky-bottom:#F8F5FC;
+    --sand:#CBB0E8;
+    --sand-deep:#8C5FC4;
+    --ink:#2E2540;
+    --ink-soft:#6C5D80;
+    --accent:#9B6FE0;
+    --accent-deep:#7645C2;
+    --white:#FFFFFF;
+    --shadow:rgba(108,73,160,.16);
+    --footer-h: calc(100vw / 5);
+    --safe-b: env(safe-area-inset-bottom, 0px);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:"Noto Sans JP","Hiragino Sans",sans-serif;
+    color:var(--ink);
+    background:var(--sky-bottom);
+    overflow-x:hidden;
+    -webkit-tap-highlight-color:transparent;
+  }
+
+  /* ---------- Header ---------- */
+  header.hero{
+    position:relative;
+    background:linear-gradient(180deg,var(--sky-top) 0%, var(--sky-mid) 55%, var(--sky-bottom) 100%);
+    padding:38px 20px 30px;
+    text-align:center;
+    overflow:hidden;
+  }
+  header.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255,255,255,.55) 0, rgba(255,255,255,0) 40%),
+      radial-gradient(circle at 85% 10%, rgba(255,255,255,.4) 0, rgba(255,255,255,0) 35%);
+    pointer-events:none;
+  }
+  .badge{
+    position:relative;
+    width:104px;height:104px;
+    margin:0 auto 14px;
+    border-radius:50%;
+    background:var(--white);
+    padding:5px;
+    box-shadow:0 10px 24px var(--shadow);
+  }
+  .badge img{
+    width:100%;height:100%;
+    border-radius:50%;
+    display:block;
+    object-fit:cover;
+    border:2px solid var(--sky-top);
+  }
+  h1.title{
+    position:relative;
+    font-family:"Zen Maru Gothic",sans-serif;
+    font-weight:900;
+    font-size:1.7rem;
+    letter-spacing:.02em;
+    margin:0 0 8px;
+    color:var(--ink);
+  }
+  p.tagline{
+    position:relative;
+    margin:0;
+    font-size:.86rem;
+    color:var(--ink-soft);
+    font-weight:500;
+  }
+  .tagline .paw{
+    color:var(--accent-deep);
+  }
+
+  /* ---------- Content ---------- */
+  main{
+    padding: 22px 16px calc(var(--footer-h) + 78px + var(--safe-b));
+    max-width:520px;
+    margin:0 auto;
+  }
+
+  .section-label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:26px 4px 12px;
+    font-family:"Zen Maru Gothic",sans-serif;
+    font-weight:700;
+    font-size:.82rem;
+    color:var(--sand-deep);
+  }
+  .section-label:first-child{margin-top:2px;}
+  .section-label::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:repeating-linear-gradient(90deg, var(--sand) 0 6px, transparent 6px 11px);
+    border-radius:2px;
+  }
+
+  ul.links{
+    list-style:none;
+    margin:0 0 4px;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  a.card{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px 16px;
+    background:var(--white);
+    border-radius:16px;
+    text-decoration:none;
+    color:var(--ink);
+    box-shadow:0 3px 10px var(--shadow);
+    border:1px solid rgba(34,48,58,.05);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  a.card:active{
+    transform:scale(.97);
+    box-shadow:0 1px 4px var(--shadow);
+  }
+
+  .icon{
+    flex:0 0 auto;
+    width:42px;height:42px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+  }
+  .icon svg{width:22px;height:22px;}
+  .icon.yt{background:#FF3B30;}
+  .icon.x{background:#111417;}
+  .icon.ig{background:radial-gradient(circle at 30% 110%, #ffd776 0%, #f3a13a 20%, #e34b5e 45%, #c93aa9 65%, #7c4fdb 90%);}
+
+  .card-text{flex:1 1 auto; min-width:0;}
+  .card-text .name{
+    font-weight:700;
+    font-size:.96rem;
+    line-height:1.3;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .card-text .sub{
+    font-size:.74rem;
+    color:var(--ink-soft);
+    margin-top:1px;
+  }
+  .go{
+    flex:0 0 auto;
+    color:#C8D2D6;
+    font-size:1.1rem;
+  }
+
+  .note{
+    margin:20px 4px 0;
+    font-size:.7rem;
+    line-height:1.7;
+    color:var(--ink-soft);
+    opacity:.8;
+  }
+
+  /* ---------- Fixed bottom: install button + footer image ---------- */
+  .bottom-fixed{
+    position:fixed;
+    left:0;right:0;bottom:0;
+    z-index:20;
+    background:var(--sky-bottom);
+  }
+
+  .install-wrap{
+    display:flex;
+    justify-content:center;
+    padding:10px 16px calc(10px + var(--safe-b));
+    background:linear-gradient(180deg, rgba(243,248,244,0) 0%, var(--sky-bottom) 35%);
+  }
+
+  button.install-btn{
+    all:unset;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:"Zen Maru Gothic",sans-serif;
+    font-weight:700;
+    font-size:.92rem;
+    color:#fff;
+    background:linear-gradient(180deg, var(--accent) 0%, var(--accent-deep) 100%);
+    padding:12px 22px;
+    border-radius:999px;
+    box-shadow:0 8px 18px rgba(118,69,194,.35);
+    cursor:pointer;
+    transition:transform .12s ease;
+  }
+  button.install-btn:active{transform:scale(.96);}
+  button.install-btn svg{width:18px;height:18px;flex:0 0 auto;}
+
+  .footer-strip{
+    position:relative;
+    width:100%;
+    height:var(--footer-h);
+    overflow:hidden;
+    background:var(--sky-bottom);
+  }
+  .footer-strip .track{
+    position:absolute;
+    top:0;left:0;
+    height:100%;
+    width:200%;
+    display:flex;
+    animation:march 22s linear infinite;
+  }
+  .footer-strip img{
+    height:100%;
+    width:50%;
+    object-fit:cover;
+    display:block;
+  }
+  @keyframes march{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .footer-strip .track{animation:none;}
+  }
+
+  /* ---------- Modal (iOS instructions) ---------- */
+  .modal-overlay{
+    position:fixed;inset:0;
+    background:rgba(34,48,58,.45);
+    display:none;
+    align-items:flex-end;
+    justify-content:center;
+    z-index:50;
+  }
+  .modal-overlay.show{display:flex;}
+  .modal{
+    background:#fff;
+    width:100%;
+    max-width:520px;
+    border-radius:20px 20px 0 0;
+    padding:22px 22px calc(24px + var(--safe-b));
+    box-shadow:0 -10px 30px rgba(0,0,0,.2);
+  }
+  .modal h2{
+    font-family:"Zen Maru Gothic",sans-serif;
+    font-size:1.05rem;
+    margin:0 0 12px;
+  }
+  .modal ol{
+    margin:0 0 16px;
+    padding-left:20px;
+    font-size:.88rem;
+    line-height:1.9;
+    color:var(--ink);
+  }
+  .modal .icon-inline{
+    display:inline-block;
+    vertical-align:-4px;
+    margin:0 2px;
+  }
+  .modal button.close{
+    all:unset;
+    display:block;
+    width:100%;
+    text-align:center;
+    padding:12px;
+    border-radius:999px;
+    background:#EEF3F1;
+    font-weight:700;
+    color:var(--ink-soft);
+    cursor:pointer;
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="badge"><img src="icons/icon-192.png" alt="石丸伸二まとめアイコン"></div>
+  <h1 class="title">石丸伸二まとめ</h1>
+  <p class="tagline">公式チャンネル・SNSと関連番組を<span class="paw">まとめて</span>チェック</p>
+</header>
+
+<main>
+
+  <div class="section-label">石丸伸二 本人</div>
+  <ul class="links">
+    <li>
+      <a class="card" href="https://youtube.com/@shinji_ishimaru_1982?si=LNsZB_tAxJ1dP3XK" target="_blank" rel="noopener">
+        <span class="icon yt">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.95-1.9-.95-2.36-1.01C16.9 2.5 12 2.5 12 2.5h-.01s-4.89 0-8.19.33c-.46.06-1.46.06-2.36 1.01C.73 4.56.5 6.2.5 6.2S.26 8.13.26 10.06v1.87c0 1.93.24 3.86.24 3.86s.23 1.64.94 2.36c.9.96 2.08.93 2.6 1.03 1.89.18 8 .34 8 .34s4.9-.01 8.2-.33c.46-.06 1.46-.06 2.36-1.02.71-.72.94-2.36.94-2.36s.24-1.93.24-3.86v-1.87c0-1.93-.24-3.86-.24-3.86z" opacity="0"/><path d="M9.75 15.02V8.98L15.5 12l-5.75 3.02z" fill="#fff"/><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.95-1.9-.95-2.36-1.01C16.9 2.5 12 2.5 12 2.5h-.01s-4.89 0-8.19.33c-.46.06-1.46.06-2.36 1.01C.73 4.56.5 6.2.5 6.2S.26 8.13.26 10.06v1.87c0 1.93.24 3.86.24 3.86s.23 1.64.94 2.36c.9.96 2.08.93 2.6 1.03 1.89.18 8 .34 8 .34s4.9-.01 8.2-.33c.46-.06 1.46-.06 2.36-1.02.71-.72.94-2.36.94-2.36s.24-1.93.24-3.86v-1.87c0-1.93-.24-3.86-.24-3.86zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+        </span>
+        <span class="card-text">
+          <span class="name">YouTube</span>
+          <span class="sub">@shinji_ishimaru_1982</span>
+        </span>
+        <span class="go">›</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="https://x.com/shinji_ishimaru" target="_blank" rel="noopener">
+        <span class="icon x">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M18.24 2.5h3.3l-7.2 8.23 8.47 10.77h-6.63l-5.19-6.6-5.94 6.6H1.75l7.7-8.8L1.35 2.5h6.8l4.7 6.03zm-1.16 17.16h1.83L7.02 4.24H5.06z"/></svg>
+        </span>
+        <span class="card-text">
+          <span class="name">𝕏（旧Twitter）</span>
+          <span class="sub">@shinji_ishimaru</span>
+        </span>
+        <span class="go">›</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="https://www.instagram.com/shinji_ishimaru?igsh=amF4bzU1OG1iYW40" target="_blank" rel="noopener">
+        <span class="icon ig">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1" fill="#fff" stroke="none"/></svg>
+        </span>
+        <span class="card-text">
+          <span class="name">Instagram</span>
+          <span class="sub">shinji_ishimaru</span>
+        </span>
+        <span class="go">›</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="section-label">関連チャンネル</div>
+  <ul class="links">
+    <li>
+      <a class="card" href="https://youtube.com/@rehac9ch?si=nuF_2UNy74KIpXJe" target="_blank" rel="noopener">
+        <span class="icon yt">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M9.75 15.02V8.98L15.5 12l-5.75 3.02z" fill="#111"/><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.95-1.9-.95-2.36-1.01C16.9 2.5 12 2.5 12 2.5h-.01s-4.89 0-8.19.33c-.46.06-1.46.06-2.36 1.01C.73 4.56.5 6.2.5 6.2S.26 8.13.26 10.06v1.87c0 1.93.24 3.86.24 3.86s.23 1.64.94 2.36c.9.96 2.08.93 2.6 1.03 1.89.18 8 .34 8 .34s4.9-.01 8.2-.33c.46-.06 1.46-.06 2.36-1.02.71-.72.94-2.36.94-2.36s.24-1.93.24-3.86v-1.87c0-1.93-.24-3.86-.24-3.86z"/></svg>
+        </span>
+        <span class="card-text">
+          <span class="name">ReHac9</span>
+          <span class="sub">@rehac9ch</span>
+        </span>
+        <span class="go">›</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="https://youtube.com/@rehacq?si=ezjg-PeCHMGoWOFz" target="_blank" rel="noopener">
+        <span class="icon yt">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M9.75 15.02V8.98L15.5 12l-5.75 3.02z" fill="#111"/><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.95-1.9-.95-2.36-1.01C16.9 2.5 12 2.5 12 2.5h-.01s-4.89 0-8.19.33c-.46.06-1.46.06-2.36 1.01C.73 4.56.5 6.2.5 6.2S.26 8.13.26 10.06v1.87c0 1.93.24 3.86.24 3.86s.23 1.64.94 2.36c.9.96 2.08.93 2.6 1.03 1.89.18 8 .34 8 .34s4.9-.01 8.2-.33c.46-.06 1.46-.06 2.36-1.02.71-.72.94-2.36.94-2.36s.24-1.93.24-3.86v-1.87c0-1.93-.24-3.86-.24-3.86z"/></svg>
+        </span>
+        <span class="card-text">
+          <span class="name">ReHacQ</span>
+          <span class="sub">@rehacq</span>
+        </span>
+        <span class="go">›</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="https://youtube.com/@michas140shinri?si=LqnSnL1fBd70AvUL" target="_blank" rel="noopener">
+        <span class="icon yt">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M9.75 15.02V8.98L15.5 12l-5.75 3.02z" fill="#111"/><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.95-1.9-.95-2.36-1.01C16.9 2.5 12 2.5 12 2.5h-.01s-4.89 0-8.19.33c-.46.06-1.46.06-2.36 1.01C.73 4.56.5 6.2.5 6.2S.26 8.13.26 10.06v1.87c0 1.93.24 3.86.24 3.86s.23 1.64.94 2.36c.9.96 2.08.93 2.6 1.03 1.89.18 8 .34 8 .34s4.9-.01 8.2-.33c.46-.06 1.46-.06 2.36-1.02.71-.72.94-2.36.94-2.36s.24-1.93.24-3.86v-1.87c0-1.93-.24-3.86-.24-3.86z"/></svg>
+        </span>
+        <span class="card-text">
+          <span class="name">石丸伸二と日本を動かそう🐮</span>
+          <span class="sub">@michas140shinri</span>
+        </span>
+        <span class="go">›</span>
+      </a>
+    </li>
+  </ul>
+
+  <p class="note">本アプリは石丸伸二氏および関連チャンネルの非公式リンク集です。各サービスの内容・運営については各リンク先をご確認ください。</p>
+</main>
+
+<div class="bottom-fixed">
+  <div class="install-wrap">
+    <button class="install-btn" id="installBtn" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+      ホーム画面に追加
+    </button>
+  </div>
+  <div class="footer-strip" aria-hidden="true">
+    <div class="track">
+      <img src="footer.png" alt="">
+      <img src="footer.png" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <h2>ホーム画面に追加する方法</h2>
+    <ol id="modalSteps"></ol>
+    <button class="close" id="modalClose">閉じる</button>
+  </div>
+</div>
+
+<script>
+  let deferredPrompt = null;
+  const installBtn = document.getElementById('installBtn');
+  const overlay = document.getElementById('modalOverlay');
+  const modalSteps = document.getElementById('modalSteps');
+  const modalClose = document.getElementById('modalClose');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+  });
+
+  function isIOS(){
+    return /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  }
+
+  function showManualInstructions(){
+    let steps;
+    if (isIOS()) {
+      steps = [
+        '画面下の「共有」ボタン（□に↑）をタップ',
+        'メニューから「ホーム画面に追加」を選択',
+        '右上の「追加」をタップして完了'
+      ];
+    } else {
+      steps = [
+        'ブラウザ右上（または下部）のメニュー（︙）をタップ',
+        '「ホーム画面に追加」または「アプリをインストール」を選択',
+        '表示された内容を確認して「追加」をタップ'
+      ];
+    }
+    modalSteps.innerHTML = steps.map(s => `<li>${s}</li>`).join('');
+    overlay.classList.add('show');
+  }
+
+  installBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+    } else {
+      showManualInstructions();
+    }
+  });
+
+  modalClose.addEventListener('click', () => overlay.classList.remove('show'));
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('show'); });
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(()=>{});
+    });
+  }
+</script>
+</body>
+</html>
